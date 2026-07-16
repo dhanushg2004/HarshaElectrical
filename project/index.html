@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Harsha Electrical | Professional Electrical Solutions</title>
+
+<style>
+
+/* RESET */
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Segoe UI', sans-serif;
+}
+
+body{
+background:#f4f6f9;
+color:#333;
+scroll-behavior:smooth;
+}
+
+/* NAVBAR */
+nav{
+background:#0d1b2a;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 60px;
+position:fixed;
+width:100%;
+z-index:1000;
+}
+
+.logo{
+color:white;
+font-size:22px;
+font-weight:bold;
+}
+
+nav a{
+color:white;
+margin-left:25px;
+text-decoration:none;
+transition:0.3s;
+}
+
+nav a:hover{
+color:#00b4d8;
+}
+
+/* HERO */
+.hero{
+height:100vh;
+background:linear-gradient(rgba(13,27,42,0.85),rgba(13,27,42,0.85)),
+url("https://images.pexels.com/photos/257736/pexels-photo-257736.jpeg");
+background-size:cover;
+background-position:center;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+color:white;
+padding:20px;
+}
+
+.hero h1{
+font-size:48px;
+margin-bottom:20px;
+}
+
+.hero p{
+font-size:20px;
+max-width:700px;
+}
+
+.btn{
+background:#00b4d8;
+color:white;
+padding:12px 30px;
+margin-top:25px;
+border-radius:30px;
+text-decoration:none;
+font-weight:bold;
+transition:0.3s;
+}
+
+.btn:hover{
+background:#0096c7;
+}
+
+/* SECTION COMMON */
+section{
+padding:100px 40px;
+text-align:center;
+}
+
+h2{
+font-size:32px;
+margin-bottom:40px;
+color:#0d1b2a;
+}
+
+/* ABOUT */
+#about{
+background:linear-gradient(rgba(255,255,255,0.92),rgba(255,255,255,0.92)),
+url("https://images.pexels.com/photos/159397/electrician-electricity-power-line-159397.jpeg");
+background-size:cover;
+background-position:center;
+}
+
+.about p{
+max-width:900px;
+margin:auto;
+line-height:1.8;
+font-size:18px;
+}
+
+/* SERVICES */
+.services-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+max-width:1100px;
+margin:auto;
+}
+
+.service-box{
+background:#ffffff;
+padding:30px;
+border-radius:10px;
+box-shadow:0 8px 20px rgba(0,0,0,0.08);
+transition:0.3s;
+}
+
+.service-box:hover{
+transform:translateY(-8px);
+}
+
+/* BEFORE & AFTER */
+#before{
+background:#ffffff;
+}
+
+.before-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:30px;
+max-width:1100px;
+margin:auto;
+}
+
+.before-box{
+background:white;
+padding:20px;
+border-radius:12px;
+box-shadow:0 10px 25px rgba(0,0,0,0.15);
+transition:0.3s;
+}
+
+.before-box:hover{
+transform:translateY(-8px);
+}
+
+.before-box img{
+width:100%;
+height:250px;
+object-fit:cover;
+border-radius:10px;
+margin-bottom:15px;
+}
+
+/* MATERIALS */
+.materials-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:15px;
+max-width:1200px;
+margin:auto;
+}
+
+.material-name{
+background:white;
+padding:15px;
+border-radius:8px;
+box-shadow:0 4px 12px rgba(0,0,0,0.08);
+transition:0.3s;
+}
+
+.material-name:hover{
+background:#e0f7ff;
+transform:translateY(-5px);
+}
+
+/* BOOKING */
+#booking{
+background:linear-gradient(rgba(255,255,255,0.95),rgba(255,255,255,0.95)),
+url("https://images.pexels.com/photos/2760243/pexels-photo-2760243.jpeg");
+background-size:cover;
+background-position:center;
+}
+
+form{
+max-width:500px;
+margin:auto;
+display:flex;
+flex-direction:column;
+gap:15px;
+}
+
+form input,
+form textarea{
+padding:12px;
+border:1px solid #ccc;
+border-radius:5px;
+}
+
+form button{
+background:#0d1b2a;
+color:white;
+padding:12px;
+border:none;
+border-radius:5px;
+font-weight:bold;
+cursor:pointer;
+}
+
+form button:hover{
+background:#1b263b;
+}
+
+/* CONTACT */
+.map{
+margin-top:30px;
+border-radius:10px;
+overflow:hidden;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* FOOTER */
+footer{
+background:#0d1b2a;
+padding:20px;
+color:white;
+text-align:center;
+}
+
+/* WHATSAPP */
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+padding:15px 20px;
+border-radius:50px;
+text-decoration:none;
+font-weight:bold;
+box-shadow:0 5px 15px rgba(0,0,0,0.3);
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+
+nav{
+flex-direction:column;
+padding:15px;
+}
+
+nav a{
+margin:10px 0;
+}
+
+.hero h1{
+font-size:32px;
+}
+
+.before-grid{
+grid-template-columns:1fr;
+}
+
+}
+
+</style>
+</head>
+<body>
+
+<nav>
+<div class="logo">HARSHA ELECTRICAL</div>
+<div>
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#services">Services</a>
+<a href="#before">Before & After</a>
+<a href="#materials">Materials</a>
+<a href="#booking">Booking</a>
+<a href="#contact">Contact</a>
+</div>
+</nav>
+
+<section class="hero" id="home">
+<h1>Professional Electrical Solutions</h1>
+<p>Wholesale & Retail Electrical Materials and Complete Installation Services for Residential, Commercial & Industrial Projects.</p>
+<a href="https://wa.me/918688464767" class="btn">Chat on WhatsApp</a>
+</section>
+
+<section id="about" class="about">
+<h2>About Harsha Electrical</h2>
+<p>
+Harsha Electrical is a trusted electrical supplier and service provider in Proddatur, Andhra Pradesh.
+We deliver premium quality electrical materials, safe wiring solutions, and professional installation services.
+</p>
+</section>
+
+<section id="services">
+<h2>What We Offer</h2>
+<div class="services-grid">
+<div class="service-box">House Wiring & Rewiring</div>
+<div class="service-box">Commercial Installations</div>
+<div class="service-box">Industrial Solutions</div>
+<div class="service-box">Lighting Systems</div>
+<div class="service-box">Solar Installation</div>
+<div class="service-box">Electrical Maintenance</div>
+</div>
+</section>
+
+<section id="before">
+<h2>Before & After Transformation</h2>
+<div class="before-grid">
+
+<div class="before-box">
+<img src="https://images.pexels.com/photos/1216589/pexels-photo-1216589.jpeg" alt="Old Wiring">
+<h3>Before</h3>
+<p>Old unsafe wiring, exposed cables and poor installation.</p>
+</div>
+
+<div class="before-box">
+<img src="https://images.pexels.com/photos/257736/pexels-photo-257736.jpeg" alt="Professional Installation">
+<h3>After</h3>
+<p>Professional structured wiring with premium safety standards.</p>
+</div>
+
+</div>
+</section>
+
+<section id="materials">
+<h2>50+ Electrical Materials Available</h2>
+<div class="materials-grid">
+<div class="material-name">Copper Wire</div>
+<div class="material-name">FRLS Cable</div>
+<div class="material-name">Armoured Cable</div>
+<div class="material-name">LED Bulb</div>
+<div class="material-name">Tube Light</div>
+<div class="material-name">Flood Light</div>
+<div class="material-name">MCB</div>
+<div class="material-name">RCCB</div>
+<div class="material-name">Distribution Board</div>
+<div class="material-name">Main Switch</div>
+<div class="material-name">Isolator</div>
+<div class="material-name">Electrical Panel</div>
+<div class="material-name">Relay</div>
+<div class="material-name">Contactor</div>
+<div class="material-name">Ceiling Fan</div>
+<div class="material-name">Exhaust Fan</div>
+<div class="material-name">Solar Panel</div>
+<div class="material-name">Solar Inverter</div>
+<div class="material-name">Battery</div>
+<div class="material-name">Switch</div>
+<div class="material-name">Socket</div>
+<div class="material-name">Plug Top</div>
+<div class="material-name">Junction Box</div>
+<div class="material-name">Terminal Block</div>
+<div class="material-name">Voltage Stabilizer</div>
+<div class="material-name">Transformer</div>
+<div class="material-name">Cable Lugs</div>
+<div class="material-name">Heat Shrink Tube</div>
+<div class="material-name">Electrical Tape</div>
+<div class="material-name">Motion Sensor</div>
+</div>
+</section>
+
+<section id="booking">
+<h2>Book a Service</h2>
+<form action="https://formsubmit.co/your-email@example.com" method="POST">
+<input type="text" name="name" placeholder="Your Name" required>
+<input type="tel" name="phone" placeholder="Phone Number" required>
+<input type="text" name="service" placeholder="Service Required" required>
+<textarea name="message" placeholder="Project Details"></textarea>
+<button type="submit">Submit Booking</button>
+</form>
+</section>
+
+<section id="contact">
+<h2>Contact Us</h2>
+<p>Proddatur, Kadapa District, Andhra Pradesh</p>
+<p>Phone: 8688464767 / 7989244812</p>
+
+<div class="map">
+<iframe src="https://www.google.com/maps?q=Proddatur%20Kadapa%20Andhra%20Pradesh&output=embed"
+width="100%" height="350" style="border:0;"></iframe>
+</div>
+</section>
+
+<footer>
+© 2026 Harsha Electrical | All Rights Reserved
+</footer>
+
+<a href="https://wa.me/917989244812" class="whatsapp">WhatsApp</a>
+
+</body>
+</html>
